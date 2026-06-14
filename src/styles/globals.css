@@ -42,7 +42,28 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
 }
 
 body {
@@ -90,6 +111,91 @@ body {
 
 .animate-pulse-gold {
   animation: pulse-gold 2s ease-in-out infinite;
+}
+
+@keyframes phoenix-flame-flicker {
+  0%, 100% {
+    opacity: 0.65;
+    transform: scaleY(1) translateY(0);
+  }
+  25% {
+    opacity: 1;
+    transform: scaleY(1.12) translateY(-1px);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scaleY(0.95) translateY(1px);
+  }
+  75% {
+    opacity: 0.95;
+    transform: scaleY(1.08) translateY(-2px);
+  }
+}
+
+@keyframes phoenix-wing-pulse {
+  0%, 100% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+@keyframes phoenix-crest-flicker {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+@keyframes phoenix-glow-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(0.95); }
+  50% { opacity: 0.65; transform: scale(1.05); }
+}
+
+.phoenix-flame-wisp {
+  transform-origin: center bottom;
+  animation: phoenix-flame-flicker 1.6s ease-in-out infinite;
+}
+
+.phoenix-wing-left,
+.phoenix-wing-right {
+  transform-origin: 50px 42px;
+  animation: phoenix-wing-pulse 2.4s ease-in-out infinite;
+}
+
+.phoenix-wing-right {
+  animation-delay: 0.3s;
+}
+
+.phoenix-crest {
+  animation: phoenix-crest-flicker 1.2s ease-in-out infinite;
+}
+
+.phoenix-glow {
+  animation: phoenix-glow-pulse 2s ease-in-out infinite;
+}
+
+.phoenix-glow-delayed {
+  animation: phoenix-glow-pulse 2.5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.phoenix-tail-flames {
+  transform-origin: 50px 58px;
+}
+
+.group:hover .phoenix-wing-left,
+.group:hover .phoenix-wing-right {
+  animation-duration: 1.2s;
+}
+
+.group:hover .phoenix-flame-wisp {
+  animation-duration: 0.9s;
+}
+
+.group:hover .phoenix-glow {
+  opacity: 0.8;
 }
 
 @media (prefers-reduced-motion: reduce) {

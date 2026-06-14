@@ -33,6 +33,7 @@ export function FeaturedProductsSection() {
                     src={project?.image}
                     alt={`${product.title} preview`}
                     title={product.title}
+                    category={product.subtitle}
                     fit={project?.imageFit ?? "cover"}
                     className="aspect-[16/9]"
                   />

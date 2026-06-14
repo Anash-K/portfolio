@@ -57,6 +57,7 @@ function ProjectCard({
           src={project.image}
           alt={`${project.title} preview`}
           title={project.title}
+          category={project.category}
           fit={project.imageFit ?? "cover"}
           className="aspect-[16/10]"
         />
@@ -113,6 +114,7 @@ function ProjectModal({
             src={project.image}
             alt={`${project.title} preview`}
             title={project.title}
+            category={project.category}
             fit={project.imageFit ?? "cover"}
             className="aspect-[16/9]"
           />

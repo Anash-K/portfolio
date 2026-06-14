@@ -137,7 +137,8 @@ export function GlobeCanvas() {
         <Canvas
           camera={{ position: [0, 0, 5.5], fov: 45 }}
           dpr={[1, 1.5]}
-          gl={{ antialias: true, alpha: true }}
+          frameloop="demand"
+          gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
           style={{ background: "transparent" }}
         >
           <NetworkGlobe />

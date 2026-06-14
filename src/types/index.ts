@@ -4,7 +4,7 @@ export interface Project {
   title: string;
   description: string;
   longDescription: string;
-  image: string;
+  image?: string;
   imageFit?: "cover" | "contain";
   technologies: string[];
   features: string[];

@@ -6,6 +6,7 @@ import { ArrowUp, Mail, Phone } from "lucide-react";
 import { LinkedInIcon } from "@/components/ui/SocialIcons";
 import { FOOTER_TECH_STACK, NAV_LINKS, SOCIAL_LINKS } from "@/constants/navigation";
 import { SITE_CONFIG } from "@/constants/site";
+import { useLenis } from "@/providers/SmoothScrollProvider";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
@@ -17,8 +18,13 @@ const iconMap = {
 
 export function Footer() {
   const pathname = usePathname();
+  const lenis = useLenis();
 
   const scrollToTop = () => {
+    if (lenis) {
+      lenis.scrollTo(0, { duration: 1.1 });
+      return;
+    }
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 

@@ -53,6 +53,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             src={project.image}
             alt={`${project.title} preview`}
             title={project.title}
+            category={project.category}
             fit={project.imageFit ?? "cover"}
             className="aspect-[16/9] md:aspect-[21/9]"
             priority

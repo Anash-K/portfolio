@@ -42,7 +42,6 @@ export const PROJECTS: Project[] = [
       "Enterprise booking platform for airport services including Lounge Access, Meet & Greet, Porter, and Wheelchair.",
     longDescription:
       "Built for Adani Group, this enterprise-scale platform handles booking and fulfillment workflows for airport services. It includes responsive customer and operational dashboards with real-time updates via Socket.IO, integrated payment systems, entitlement validation, and booking orchestration.",
-    image: "/projects/tfs-platform.jpg",
     technologies: [
       "React.js",
       "Next.js",
@@ -71,7 +70,6 @@ export const PROJECTS: Project[] = [
       "Modern CRM with lead-to-client pipeline, Google Meet integration, and real-time notifications.",
     longDescription:
       "A scalable CRM system built with reusable components and advanced form workflows. Features include automated lead-to-client pipelines, Google Meet integration, real-time notifications, and centralized customer data management — improving operational efficiency and data management by 30%.",
-    image: "/projects/crm-platform.jpg",
     technologies: [
       "Next.js",
       "React.js",
@@ -102,7 +100,6 @@ export const PROJECTS: Project[] = [
       "Event-driven vehicle rental platform with real-time tracking, fault-tolerant payments, and dynamic pricing.",
     longDescription:
       "A scalable vehicle rental platform built with Kafka-based event-driven microservices. Features real-time vehicle tracking and booking via Socket.IO, a fault-tolerant payment system with webhooks and transactional outbox pattern, and a dynamic pricing engine with Redis caching — reducing response time by 30–40%.",
-    image: "/projects/rental-platform.jpg",
     technologies: [
       "Node.js",
       "React.js",
@@ -134,8 +131,6 @@ export const PROJECTS: Project[] = [
       "A modern faith-tech platform for Scripture engagement through interactive learning, audio content, daily devotionals, and community experiences.",
     longDescription:
       "Daily Shepherd is a faith-tech platform that empowers users to engage with Scripture through Bible learning, daily devotionals, podcast streaming, and content discovery. The platform includes subscription management, search, reading history, sharing, comments, and engagement workflows — delivered through scalable, responsive mobile interfaces and reusable UI components for a seamless spiritual growth experience.",
-    image: "/projects/daily-shepherd.png",
-    imageFit: "contain",
     technologies: [
       "React.js",
       "React Native",
@@ -166,8 +161,6 @@ export const PROJECTS: Project[] = [
       "A health-tech platform helping users improve fitness consistency through personalized wellness programs, activity tracking, sleep monitoring, and behavioral health insights.",
     longDescription:
       "Bettermint Health is a behaviour psychology-powered fitness app built for busy users, focusing on consistency over extremes. The platform balances four pillars — Movement, Nutrition, Sleep, and Wellbeing — through personalized wellness journeys, lifestyle assessments, and incremental habit-building. Built with scalable React Native architecture for high-performance health tracking and long-term engagement.",
-    image: "/projects/bettermint-health.png",
-    imageFit: "contain",
     technologies: [
       "React Native",
       "TypeScript",

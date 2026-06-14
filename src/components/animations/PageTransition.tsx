@@ -10,34 +10,30 @@ interface PageTransitionProps {
 }
 
 const forwardVariants = {
-  initial: { opacity: 0, x: 48, filter: "blur(6px)" },
+  initial: { opacity: 0, y: 16 },
   animate: {
     opacity: 1,
-    x: 0,
-    filter: "blur(0px)",
-    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] as const },
+    y: 0,
+    transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] as const },
   },
   exit: {
     opacity: 0,
-    x: -32,
-    filter: "blur(4px)",
-    transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] as const },
+    y: -8,
+    transition: { duration: 0.25, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
 
 const backwardVariants = {
-  initial: { opacity: 0, x: -48, filter: "blur(6px)" },
+  initial: { opacity: 0, y: 16 },
   animate: {
     opacity: 1,
-    x: 0,
-    filter: "blur(0px)",
-    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] as const },
+    y: 0,
+    transition: { duration: 0.45, ease: [0.22, 1, 0.36, 1] as const },
   },
   exit: {
     opacity: 0,
-    x: 32,
-    filter: "blur(4px)",
-    transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] as const },
+    y: -8,
+    transition: { duration: 0.25, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
 

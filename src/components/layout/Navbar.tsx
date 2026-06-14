@@ -6,26 +6,29 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/constants/navigation";
-import { SITE_CONFIG } from "@/constants/site";
+import { PhoenixLogo } from "@/components/ui/PhoenixLogo";
+import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const pathname = usePathname();
-  const [isScrolled, setIsScrolled] = useState(false);
+  const isScrolled = useScrollPosition(20);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    if (isMobileOpen) {
+      document.body.style.overflow = "hidden";
+      return;
+    }
+
+    document.body.style.overflow = "";
+  }, [isMobileOpen]);
 
   useEffect(() => {
-    document.body.style.overflow = isMobileOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
-  }, [isMobileOpen]);
+  }, []);
 
   useEffect(() => {
     setIsMobileOpen(false);
@@ -50,14 +53,10 @@ export function Navbar() {
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-8">
           <Link
             href="/"
-            className="group relative font-display text-xl font-bold text-gold"
+            className="group relative flex items-center gap-2 rounded-lg transition-transform duration-300 hover:scale-105"
+            aria-label="Anash Khan — Home"
           >
-            <span className="relative z-10">
-              {SITE_CONFIG.name
-                .split(" ")
-                .map((n) => n[0])
-                .join("")}
-            </span>
+            <PhoenixLogo size="sm" />
             <span className="absolute -inset-2 rounded-lg bg-gold/0 transition-colors group-hover:bg-gold/5" />
           </Link>
 

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" fill="none" role="img" aria-label="Project preview placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="50%" stop-color="#111111"/>
+      <stop offset="100%" stop-color="#0d0b08"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b8962e"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#e8c547"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#d4af37" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#d4af37" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#d4af37" stroke-opacity="0.06" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <rect width="1200" height="675" fill="url(#grid)"/>
+  <rect width="1200" height="675" fill="url(#glow)"/>
+
+  <rect x="220" y="120" width="760" height="435" rx="20" fill="#141414" stroke="#d4af37" stroke-opacity="0.18" stroke-width="1.5"/>
+  <rect x="220" y="120" width="760" height="52" rx="20" fill="#1a1a1a"/>
+  <rect x="220" y="152" width="760" height="20" fill="#141414"/>
+
+  <circle cx="252" cy="146" r="7" fill="#d4af37" fill-opacity="0.55"/>
+  <circle cx="278" cy="146" r="7" fill="#d4af37" fill-opacity="0.28"/>
+  <circle cx="304" cy="146" r="7" fill="#d4af37" fill-opacity="0.18"/>
+
+  <rect x="260" y="210" width="300" height="24" rx="6" fill="#d4af37" fill-opacity="0.22"/>
+  <rect x="260" y="252" width="520" height="14" rx="4" fill="#ffffff" fill-opacity="0.08"/>
+  <rect x="260" y="280" width="460" height="14" rx="4" fill="#ffffff" fill-opacity="0.06"/>
+  <rect x="260" y="308" width="380" height="14" rx="4" fill="#ffffff" fill-opacity="0.05"/>
+
+  <rect x="260" y="360" width="220" height="140" rx="14" fill="#d4af37" fill-opacity="0.08" stroke="#d4af37" stroke-opacity="0.16"/>
+  <rect x="500" y="360" width="220" height="140" rx="14" fill="#d4af37" fill-opacity="0.06" stroke="#d4af37" stroke-opacity="0.12"/>
+  <rect x="740" y="360" width="200" height="140" rx="14" fill="#d4af37" fill-opacity="0.04" stroke="#d4af37" stroke-opacity="0.1"/>
+
+  <path d="M600 500 L640 440 L680 500 Z" fill="url(#gold)" fill-opacity="0.35"/>
+  <rect x="585" y="505" width="30" height="36" rx="4" fill="url(#gold)" fill-opacity="0.25"/>
+
+  <text x="600" y="590" text-anchor="middle" fill="#d4af37" fill-opacity="0.45" font-family="system-ui, sans-serif" font-size="18" font-weight="600" letter-spacing="0.28em">PROJECT PREVIEW</text>
+</svg>

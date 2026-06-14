@@ -1,26 +1,24 @@
-import path from "node:path";
+import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "@/generated/prisma/client";
-import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
+import { Pool } from "pg";
 
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined;
+  pgPool: Pool | undefined;
 };
 
-function resolveDatabaseUrl() {
-  const url = process.env.DATABASE_URL ?? "file:./dev.db";
+function createPrismaClient() {
+  const pool =
+    globalForPrisma.pgPool ??
+    new Pool({
+      connectionString: process.env.DATABASE_URL,
+    });
 
-  if (url.startsWith("file:./")) {
-    const fileName = url.replace("file:./", "");
-    return `file:${path.join(process.cwd(), "prisma", fileName)}`;
+  if (process.env.NODE_ENV !== "production") {
+    globalForPrisma.pgPool = pool;
   }
 
-  return url;
-}
-
-function createPrismaClient() {
-  const adapter = new PrismaBetterSqlite3({
-    url: resolveDatabaseUrl(),
-  });
+  const adapter = new PrismaPg(pool);
 
   return new PrismaClient({
     adapter,

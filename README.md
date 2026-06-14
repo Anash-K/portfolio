@@ -32,7 +32,7 @@ Contact form submissions are saved to a SQLite database via `POST /api/contact`.
 Configure in `.env`:
 
 ```env
-DATABASE_URL="file:./dev.db"
+DATABASE_URL="postgresql://anashkhan@localhost:5432/portfolio?schema=public"
 ADMIN_EMAIL="your-email@gmail.com"
 ADMIN_PASSWORD="your-strong-password"
 SESSION_SECRET="long-random-secret-string"

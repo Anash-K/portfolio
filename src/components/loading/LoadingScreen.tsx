@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { LOADING_MESSAGES } from "@/constants/site";
+import { PhoenixLogo } from "@/components/ui/PhoenixLogo";
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -53,7 +54,7 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="relative flex h-24 w-24 items-center justify-center">
+          <div className="relative flex h-28 w-28 items-center justify-center">
             <motion.div
               className="absolute inset-0 rounded-full border border-gold/25"
               animate={{ rotate: 360, scale: [1, 1.05, 1] }}
@@ -63,18 +64,16 @@ export function LoadingScreen({ onComplete }: LoadingScreenProps) {
               }}
             />
             <motion.div
-              className="absolute inset-3 rounded-full border border-gold/40"
+              className="absolute inset-3 rounded-full border border-orange-500/30"
               animate={{ rotate: -360 }}
               transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
             />
             <motion.div
-              className="absolute inset-0 rounded-full bg-gold/10 blur-xl"
-              animate={{ opacity: [0.3, 0.6, 0.3] }}
+              className="absolute inset-0 rounded-full bg-orange-500/10 blur-2xl"
+              animate={{ opacity: [0.25, 0.55, 0.25], scale: [0.9, 1.1, 0.9] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
-            <span className="relative font-display text-3xl font-bold tracking-wider text-gold">
-              AK
-            </span>
+            <PhoenixLogo size="lg" className="relative z-10" />
           </div>
         </motion.div>
 
