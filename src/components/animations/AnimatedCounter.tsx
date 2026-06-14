@@ -47,7 +47,7 @@ export function AnimatedCounter({
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
-      <p className="font-display text-4xl font-bold text-gold md:text-5xl">
+      <p className="font-display text-4xl font-bold text-gold-shine text-glow-gold md:text-5xl">
         {count}
         {suffix}
       </p>

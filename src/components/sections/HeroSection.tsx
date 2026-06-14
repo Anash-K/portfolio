@@ -36,15 +36,13 @@ export function HeroSection() {
           </motion.p>
 
           <h1 className="mb-4 text-4xl font-bold leading-[1.08] tracking-tight text-white md:text-5xl lg:text-6xl xl:text-7xl">
-            <TextReveal text="Hi, I'm" delay={0.3} as="span" />
+            <TextReveal text="Hi, I'm" delay={0.3} as="span" className="font-display font-medium text-premium-shine text-glow-white" />
             <br />
-            <span className="bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent">
-              <TextReveal text={SITE_CONFIG.name} delay={0.5} as="span" />
-            </span>
+            <TextReveal text={SITE_CONFIG.name} delay={0.5} as="span" className="font-display font-bold text-gold-shine text-glow-gold" />
           </h1>
 
           <motion.p
-            className="mb-3 text-xl font-semibold text-white/90 md:text-2xl lg:text-3xl"
+            className="mb-3 font-display text-2xl font-bold text-white/90 md:text-3xl lg:text-4xl text-premium-shine text-glow-white"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.75, duration: 0.6 }}

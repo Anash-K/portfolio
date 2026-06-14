@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Syne, Geist_Mono } from "next/font/google";
+import { Inter, Syne, Geist_Mono, Cormorant_Garamond, Outfit } from "next/font/google";
 import "@/styles/globals.css";
 import { SITE_CONFIG } from "@/constants/site";
 import { AppProviders } from "@/providers/AppProviders";
@@ -15,6 +15,20 @@ const syne = Syne({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600", "700", "800"],
+});
+
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const outfit = Outfit({
+  variable: "--font-outfit",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 const geistMono = Geist_Mono({
@@ -82,7 +96,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${syne.variable} ${geistMono.variable} h-full`}
+      className={`${inter.variable} ${syne.variable} ${geistMono.variable} ${cormorant.variable} ${outfit.variable} h-full`}
     >
       <body className="min-h-full bg-background text-foreground antialiased">
         <AppProviders>{children}</AppProviders>

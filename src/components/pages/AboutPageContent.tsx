@@ -25,7 +25,7 @@ export function AboutPageContent() {
               <StaggerItem key={stat.label}>
                 <Card className="group text-center transition-all hover:border-gold/25 hover:bg-white/[0.04]">
                   <motion.p
-                    className="font-display text-3xl font-bold text-gold md:text-4xl"
+                    className="font-display text-3xl font-bold text-gold-shine text-glow-gold md:text-4xl"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
@@ -46,7 +46,7 @@ export function AboutPageContent() {
                 <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.45)]">
                   <ProfileImage priority className="absolute inset-0" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <p className="text-3xl font-bold text-gold">
+                    <p className="font-display text-3xl font-bold text-gold-shine text-glow-gold">
                       {SITE_CONFIG.yearsOfExperience}+
                     </p>
                     <p className="text-sm text-white/70">Years of Experience</p>
@@ -57,7 +57,7 @@ export function AboutPageContent() {
 
             <div className="lg:col-span-3">
               <FadeIn delay={0.1}>
-                <h2 className="mb-4 text-2xl font-semibold text-white">
+                <h2 className="mb-4 font-display text-2xl font-bold text-gold-shine text-glow-gold">
                   Professional Introduction
                 </h2>
                 <p className="whitespace-pre-line text-lg leading-relaxed text-white/65">
@@ -68,7 +68,7 @@ export function AboutPageContent() {
           </div>
 
           <FadeIn delay={0.15} className="mt-20">
-            <h2 className="mb-8 text-2xl font-semibold text-white">
+            <h2 className="mb-8 font-display text-2xl font-bold text-gold-shine text-glow-gold">
               Domains Worked In
             </h2>
             <StaggerChildren className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -88,7 +88,7 @@ export function AboutPageContent() {
           </FadeIn>
 
           <FadeIn delay={0.2} className="mt-20">
-            <h2 className="mb-8 text-2xl font-semibold text-white">
+            <h2 className="mb-8 font-display text-2xl font-bold text-gold-shine text-glow-gold">
               Career Journey
             </h2>
             <StaggerChildren className="space-y-4">
@@ -114,7 +114,7 @@ export function AboutPageContent() {
             </StaggerChildren>
           </FadeIn>
           <FadeIn delay={0.25} className="mt-20">
-            <h2 className="mb-8 text-2xl font-semibold text-white">Education</h2>
+            <h2 className="mb-8 font-display text-2xl font-bold text-gold-shine text-glow-gold">Education</h2>
             <Card className="max-w-2xl">
               <h3 className="font-semibold text-white">{EDUCATION.degree}</h3>
               <p className="mt-1 text-gold/80">{EDUCATION.institution}</p>
@@ -125,7 +125,7 @@ export function AboutPageContent() {
           </FadeIn>
 
           <FadeIn delay={0.3} className="mt-20">
-            <h2 className="mb-8 text-2xl font-semibold text-white">Key Achievements</h2>
+            <h2 className="mb-8 font-display text-2xl font-bold text-gold-shine text-glow-gold">Key Achievements</h2>
             <StaggerChildren className="space-y-3">
               {ACHIEVEMENTS.map((achievement) => (
                 <StaggerItem key={achievement}>

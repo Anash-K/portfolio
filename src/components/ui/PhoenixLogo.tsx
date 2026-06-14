@@ -48,8 +48,8 @@ export function PhoenixLogo({
     >
       {showGlow && (
         <>
-          <div className="phoenix-glow absolute inset-0 rounded-full bg-gold/20 blur-xl" />
-          <div className="phoenix-glow-delayed absolute inset-1 rounded-full bg-orange-500/15 blur-lg" />
+          <div className="phoenix-glow absolute inset-0 rounded-full bg-gold/15 blur-xl" />
+          <div className="phoenix-glow-delayed absolute inset-1 rounded-full bg-amber-500/10 blur-lg" />
         </>
       )}
 
@@ -62,47 +62,28 @@ export function PhoenixLogo({
         aria-label="Phoenix logo"
       >
         <defs>
-          <linearGradient id="phoenixBodyGradient" x1="50%" y1="0%" x2="50%" y2="100%">
-            <stop offset="0%" stopColor="#FFF4C2">
-              <animate
-                attributeName="stop-color"
-                values="#FFF4C2;#FFD700;#FF8C00;#FFD700;#FFF4C2"
-                dur="3s"
-                repeatCount="indefinite"
-              />
-            </stop>
-            <stop offset="45%" stopColor="#E8C547">
-              <animate
-                attributeName="stop-color"
-                values="#E8C547;#D4AF37;#FF6B00;#D4AF37;#E8C547"
-                dur="2.5s"
-                repeatCount="indefinite"
-              />
-            </stop>
-            <stop offset="100%" stopColor="#FF6B00">
-              <animate
-                attributeName="stop-color"
-                values="#FF6B00;#FF4500;#D4AF37;#FF4500;#FF6B00"
-                dur="2s"
-                repeatCount="indefinite"
-              />
-            </stop>
+          <linearGradient id="phoenixBodyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#FFFDF0" />
+            <stop offset="40%" stopColor="#EAD075" />
+            <stop offset="75%" stopColor="#C29A30" />
+            <stop offset="100%" stopColor="#7E5406" />
           </linearGradient>
 
           <linearGradient id="phoenixWingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#FFD700" />
-            <stop offset="50%" stopColor="#FF8C00" />
-            <stop offset="100%" stopColor="#FF4500" />
+            <stop offset="0%" stopColor="#FFF2B2" />
+            <stop offset="30%" stopColor="#E5C158" />
+            <stop offset="70%" stopColor="#C29323" />
+            <stop offset="100%" stopColor="#8A5A00" />
           </linearGradient>
 
-          <linearGradient id="phoenixTailGradient" x1="50%" y1="0%" x2="50%" y2="100%">
-            <stop offset="0%" stopColor="#E8C547" />
-            <stop offset="40%" stopColor="#FF8C00" />
-            <stop offset="100%" stopColor="#FF2200" stopOpacity="0" />
+          <linearGradient id="phoenixTailGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor="#EAD075" />
+            <stop offset="50%" stopColor="#B3861B" />
+            <stop offset="100%" stopColor="#7E5406" stopOpacity="0" />
           </linearGradient>
 
           <filter id="phoenixFireGlow" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur stdDeviation="1.5" result="blur" />
+            <feGaussianBlur stdDeviation="1" result="blur" />
             <feMerge>
               <feMergeNode in="blur" />
               <feMergeNode in="SourceGraphic" />
@@ -110,7 +91,7 @@ export function PhoenixLogo({
           </filter>
 
           <filter id="phoenixSoftGlow" x="-30%" y="-30%" width="160%" height="160%">
-            <feGaussianBlur stdDeviation="2" result="blur" />
+            <feGaussianBlur stdDeviation="1.5" result="blur" />
             <feMerge>
               <feMergeNode in="blur" />
               <feMergeNode in="SourceGraphic" />
@@ -123,108 +104,112 @@ export function PhoenixLogo({
           <path
             className="phoenix-flame-wisp"
             style={{ animationDelay: "0s" }}
-            d="M50 58 C48 68, 44 78, 42 88 C41 92, 43 94, 45 90 C47 84, 49 72, 50 58Z"
+            d="M50 60 C42 72, 34 84, 30 96 C36 90, 44 78, 48 60Z"
             fill="url(#phoenixTailGradient)"
             opacity="0.85"
           />
           <path
             className="phoenix-flame-wisp"
             style={{ animationDelay: "0.25s" }}
-            d="M50 58 C52 70, 54 80, 56 90 C57 94, 55 96, 53 91 C51 82, 50 70, 50 58Z"
+            d="M50 60 C58 72, 66 84, 70 96 C64 90, 56 78, 52 60Z"
             fill="url(#phoenixTailGradient)"
-            opacity="0.75"
+            opacity="0.85"
           />
           <path
             className="phoenix-flame-wisp"
             style={{ animationDelay: "0.5s" }}
-            d="M50 58 C46 72, 40 82, 36 92 C34 96, 38 98, 40 92 C44 82, 48 68, 50 58Z"
+            d="M50 60 C50 74, 50 86, 50 98 C49 86, 49 74, 50 60Z"
             fill="url(#phoenixTailGradient)"
-            opacity="0.6"
-          />
-          <path
-            className="phoenix-flame-wisp"
-            style={{ animationDelay: "0.75s" }}
-            d="M50 58 C54 72, 60 82, 64 92 C66 96, 62 98, 60 92 C56 82, 52 68, 50 58Z"
-            fill="url(#phoenixTailGradient)"
-            opacity="0.6"
+            opacity="0.95"
           />
         </g>
 
-        {/* Left wing */}
+        {/* Left Wing (Sleek Geometric Feathers) */}
+        <g className="phoenix-wing-left" filter="url(#phoenixFireGlow)">
+          {/* Feather 1 - Top */}
+          <path
+            d="M50 42 C 35 30, 20 18, 6 12 C 16 22, 32 34, 50 42 Z"
+            fill="url(#phoenixWingGradient)"
+          />
+          {/* Feather 2 - Mid Top */}
+          <path
+            d="M50 42 C 32 35, 18 28, 10 20 C 18 28, 32 36, 50 42 Z"
+            fill="url(#phoenixWingGradient)"
+            opacity="0.9"
+          />
+          {/* Feather 3 - Mid Bottom */}
+          <path
+            d="M50 42 C 30 40, 20 36, 14 30 C 20 34, 32 39, 50 42 Z"
+            fill="url(#phoenixWingGradient)"
+            opacity="0.8"
+          />
+          {/* Feather 4 - Bottom */}
+          <path
+            d="M50 42 C 32 45, 24 42, 18 38 C 22 40, 32 42, 50 42 Z"
+            fill="url(#phoenixWingGradient)"
+            opacity="0.7"
+          />
+        </g>
+
+        {/* Right Wing (Sleek Geometric Feathers) */}
+        <g className="phoenix-wing-right" filter="url(#phoenixFireGlow)">
+          {/* Feather 1 - Top */}
+          <path
+            d="M50 42 C 65 30, 80 18, 94 12 C 84 22, 68 34, 50 42 Z"
+            fill="url(#phoenixWingGradient)"
+          />
+          {/* Feather 2 - Mid Top */}
+          <path
+            d="M50 42 C 68 35, 82 28, 90 20 C 82 28, 68 36, 50 42 Z"
+            fill="url(#phoenixWingGradient)"
+            opacity="0.9"
+          />
+          {/* Feather 3 - Mid Bottom */}
+          <path
+            d="M50 42 C 70 40, 80 36, 86 30 C 80 34, 68 39, 50 42 Z"
+            fill="url(#phoenixWingGradient)"
+            opacity="0.8"
+          />
+          {/* Feather 4 - Bottom */}
+          <path
+            d="M50 42 C 68 45, 76 42, 82 38 C 78 40, 68 42, 50 42 Z"
+            fill="url(#phoenixWingGradient)"
+            opacity="0.7"
+          />
+        </g>
+
+        {/* Body (Sleek Tapered Diamond/Shield) */}
         <path
-          d="M50 42 C38 38, 22 28, 14 18 C10 14, 8 20, 12 24 C20 32, 32 40, 44 44 C48 45, 50 44, 50 42Z"
-          fill="url(#phoenixWingGradient)"
+          d="M50 30 C53 38, 56 46, 56 54 C56 60, 52 64, 50 64 C48 64, 44 60, 44 54 C44 46, 47 38, 50 30 Z"
+          fill="url(#phoenixBodyGradient)"
           filter="url(#phoenixFireGlow)"
-          className="phoenix-wing-left"
-        />
-        <path
-          d="M50 46 C36 44, 18 34, 8 22 C4 18, 6 28, 10 32 C18 40, 34 48, 48 50 C50 50, 50 48, 50 46Z"
-          fill="url(#phoenixBodyGradient)"
-          opacity="0.7"
-          className="phoenix-wing-left"
-          style={{ animationDelay: "0.15s" }}
         />
 
-        {/* Right wing */}
+        {/* Head, Beak & Crest */}
+        {/* Head & Neck */}
         <path
-          d="M50 42 C62 38, 78 28, 86 18 C90 14, 92 20, 88 24 C80 32, 68 40, 56 44 C52 45, 50 44, 50 42Z"
-          fill="url(#phoenixWingGradient)"
-          filter="url(#phoenixFireGlow)"
-          className="phoenix-wing-right"
-        />
-        <path
-          d="M50 46 C64 44, 82 34, 92 22 C96 18, 94 28, 90 32 C82 40, 66 48, 52 50 C50 50, 50 48, 50 46Z"
-          fill="url(#phoenixBodyGradient)"
-          opacity="0.7"
-          className="phoenix-wing-right"
-          style={{ animationDelay: "0.15s" }}
-        />
-
-        {/* Body */}
-        <ellipse
-          cx="50"
-          cy="48"
-          rx="8"
-          ry="14"
-          fill="url(#phoenixBodyGradient)"
-          filter="url(#phoenixFireGlow)"
-        />
-
-        {/* Head & crest */}
-        <path
-          d="M50 28 C47 26, 46 22, 48 18 C49 16, 51 16, 52 18 C54 22, 53 26, 50 28Z"
+          d="M50 30 C47 28, 46 22, 48 18 C48 18, 51 16, 53 19 C55 22, 57 24, 56 26 C53 27, 51 29, 50 30 Z"
           fill="url(#phoenixBodyGradient)"
         />
-        <path
-          d="M50 18 C49 12, 52 8, 54 6 C55 5, 56 7, 55 9 C53 12, 51 15, 50 18Z"
-          fill="#FFD700"
-          className="phoenix-crest"
-        />
-        <path
-          d="M52 20 C54 14, 58 10, 60 8"
-          stroke="#FF8C00"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          className="phoenix-crest"
-          style={{ animationDelay: "0.3s" }}
-        />
-        <circle cx="51" cy="22" r="1.2" fill="#1a0a00" />
-
         {/* Beak */}
-        <path d="M52 24 L56 25 L52 26 Z" fill="#FF8C00" />
+        <path d="M53 19 L57 22 L53 23 Z" fill="#EAD075" />
 
-        {/* Inner wing fire details */}
+        {/* Crest Feathers */}
         <path
-          d="M50 40 L30 26 L34 32 L50 44Z"
-          fill="#FFD700"
-          opacity="0.35"
-          className="phoenix-flame-wisp"
+          d="M49 18 C46 12, 44 6, 42 4 C45 6, 48 12, 49 18 Z"
+          fill="url(#phoenixBodyGradient)"
+          className="phoenix-crest"
         />
         <path
-          d="M50 40 L70 26 L66 32 L50 44Z"
-          fill="#FFD700"
-          opacity="0.35"
-          className="phoenix-flame-wisp"
+          d="M50 18 C50 10, 51 4, 50 2 C52 4, 52 10, 50 18 Z"
+          fill="#FFFDF0"
+          className="phoenix-crest"
+          style={{ animationDelay: "0.2s" }}
+        />
+        <path
+          d="M51 18 C54 12, 56 6, 58 4 C57 6, 54 12, 51 18 Z"
+          fill="url(#phoenixBodyGradient)"
+          className="phoenix-crest"
           style={{ animationDelay: "0.4s" }}
         />
 
@@ -260,7 +245,7 @@ export function PhoenixLogo({
             cx={ember.x}
             cy={ember.y}
             r="1.2"
-            fill="#FFD700"
+            fill="#EAD075"
             initial={{ opacity: 0 }}
             animate={{
               opacity: [0, 1, 0.6, 0],

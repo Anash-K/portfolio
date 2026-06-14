@@ -31,7 +31,7 @@ export function PageHero({ label, title, description, className }: PageHeroProps
           {label}
         </motion.span>
         <motion.h1
-          className="max-w-3xl text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl"
+          className="max-w-3xl font-display text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl text-premium-shine text-glow-white pb-1"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
