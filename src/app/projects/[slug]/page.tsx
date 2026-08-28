@@ -51,11 +51,13 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         <div className="group mb-10 overflow-hidden rounded-2xl border border-white/[0.06]">
           <ProjectCoverImage
             src={project.image}
+            images={project.images}
             alt={`${project.title} preview`}
             title={project.title}
             category={project.category}
             fit={project.imageFit ?? "cover"}
             className="aspect-[16/9] md:aspect-[21/9]"
+            sizes="(max-width: 896px) 100vw, 896px"
             priority
           />
         </div>

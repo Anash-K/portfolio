@@ -43,7 +43,7 @@ export const FEATURED_PRODUCTS = [
   },
   {
     slug: "airport-services-platform",
-    title: "Airport Services Platform",
+    title: "EATS Assist",
     subtitle: "Booking & Fulfillment System",
     summary:
       "Enterprise airport services for Lounge, Meet & Greet, Porter, and Wheelchair bookings.",
@@ -54,38 +54,44 @@ export const FEATURED_PRODUCTS = [
 export const WHAT_I_BUILD = [
   {
     title: "Enterprise SaaS Platforms",
-    description: "Multi-tenant, scalable B2B products with robust architecture and analytics.",
+    description:
+      "Multi-tenant, scalable B2B products with robust architecture and analytics.",
     icon: "layers",
   },
   {
     title: "Travel & Booking Systems",
-    description: "High-performance search, payments, and real-time booking workflows.",
+    description:
+      "High-performance search, payments, and real-time booking workflows.",
     icon: "plane",
   },
   {
     title: "Mobile Applications",
-    description: "Cross-platform React Native apps with native health and device integrations.",
+    description:
+      "Cross-platform React Native apps with native health and device integrations.",
     icon: "smartphone",
   },
   {
     title: "Payment & Subscription Systems",
-    description: "Fault-tolerant payments, IAP, subscriptions, and billing automation.",
+    description:
+      "Fault-tolerant payments, IAP, subscriptions, and billing automation.",
     icon: "credit-card",
   },
   {
     title: "Real-Time Applications",
-    description: "Socket.IO, Kafka, and event-driven systems for live data and tracking.",
+    description:
+      "Socket.IO, Kafka, and event-driven systems for live data and tracking.",
     icon: "zap",
   },
   {
     title: "AI-Ready User Experiences",
-    description: "Interfaces and architectures designed for intelligent, data-driven products.",
+    description:
+      "Interfaces and architectures designed for intelligent, data-driven products.",
     icon: "sparkles",
   },
 ] as const;
 
 export const CURRENTLY_BUILDING = {
-  title: "Airport Services Platform",
+  title: "EATS Assist",
   features: [
     "Booking Workflows",
     "Payment Integrations",
@@ -96,25 +102,43 @@ export const CURRENTLY_BUILDING = {
 } as const;
 
 export const HOME_DOMAINS = [
-  { title: "Travel Tech", description: "Booking platforms, fare optimization, and travel workflows." },
-  { title: "Health Tech", description: "Wellness apps, HealthKit integrations, and habit-building." },
-  { title: "Enterprise SaaS", description: "Scalable B2B products with multi-tenant architecture." },
-  { title: "Airport Services", description: "Lounge, Porter, and Meet & Greet fulfillment systems." },
-  { title: "CRM Platforms", description: "Lead pipelines, automation, and customer management." },
+  {
+    title: "Travel Tech",
+    description: "Booking platforms, fare optimization, and travel workflows.",
+  },
+  {
+    title: "Health Tech",
+    description: "Wellness apps, HealthKit integrations, and habit-building.",
+  },
+  {
+    title: "Enterprise SaaS",
+    description: "Scalable B2B products with multi-tenant architecture.",
+  },
+  {
+    title: "Airport Services",
+    description: "Lounge, Porter, and Meet & Greet fulfillment systems.",
+  },
+  {
+    title: "CRM Platforms",
+    description: "Lead pipelines, automation, and customer management.",
+  },
 ] as const;
 
 export const RECRUITER_VALUE = [
   {
     title: "Frontend Architecture",
-    description: "Reusable component systems, design tokens, and scalable UI patterns.",
+    description:
+      "Reusable component systems, design tokens, and scalable UI patterns.",
   },
   {
     title: "Scalable UI Systems",
-    description: "Component libraries and patterns used across multiple product lines.",
+    description:
+      "Component libraries and patterns used across multiple product lines.",
   },
   {
     title: "Performance Optimization",
-    description: "Code splitting, lazy loading, and Redis caching for 30–40% gains.",
+    description:
+      "Code splitting, lazy loading, and Redis caching for 30–40% gains.",
   },
   {
     title: "Real-Time Applications",
@@ -122,10 +146,12 @@ export const RECRUITER_VALUE = [
   },
   {
     title: "Complex Product Development",
-    description: "End-to-end ownership from architecture to production deployment.",
+    description:
+      "End-to-end ownership from architecture to production deployment.",
   },
   {
     title: "Cross-Functional Collaboration",
-    description: "Working across teams to ship products in travel, health, and enterprise.",
+    description:
+      "Working across teams to ship products in travel, health, and enterprise.",
   },
 ] as const;

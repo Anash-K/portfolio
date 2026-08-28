@@ -31,11 +31,13 @@ export function FeaturedProductsSection() {
                 >
                   <ProjectCoverImage
                     src={project?.image}
+                    images={project?.images}
                     alt={`${product.title} preview`}
                     title={product.title}
                     category={product.subtitle}
                     fit={project?.imageFit ?? "cover"}
                     className="aspect-[16/9]"
+                    sizes="(max-width: 768px) 100vw, 560px"
                   />
                   <span className="absolute top-4 left-4 z-10 rounded-full border border-gold/30 bg-black/50 px-3 py-1 text-xs font-medium text-gold backdrop-blur-sm">
                     {product.subtitle}
