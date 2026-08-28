@@ -5,6 +5,7 @@ export interface Project {
   description: string;
   longDescription: string;
   image?: string;
+  images?: string[];
   imageFit?: "cover" | "contain";
   technologies: string[];
   features: string[];

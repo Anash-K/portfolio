@@ -42,7 +42,10 @@ export function PhoenixLogo({
 
   return (
     <div
-      className={cn("relative inline-flex shrink-0 items-center justify-center", className)}
+      className={cn(
+        "relative inline-flex shrink-0 items-center justify-center",
+        className,
+      )}
       style={{ width: dimension, height: dimension }}
       aria-hidden
     >
@@ -62,27 +65,51 @@ export function PhoenixLogo({
         aria-label="Phoenix logo"
       >
         <defs>
-          <linearGradient id="phoenixBodyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <linearGradient
+            id="phoenixBodyGradient"
+            x1="0%"
+            y1="0%"
+            x2="0%"
+            y2="100%"
+          >
             <stop offset="0%" stopColor="#FFFDF0" />
             <stop offset="40%" stopColor="#EAD075" />
             <stop offset="75%" stopColor="#C29A30" />
             <stop offset="100%" stopColor="#7E5406" />
           </linearGradient>
 
-          <linearGradient id="phoenixWingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <linearGradient
+            id="phoenixWingGradient"
+            x1="0%"
+            y1="0%"
+            x2="100%"
+            y2="100%"
+          >
             <stop offset="0%" stopColor="#FFF2B2" />
             <stop offset="30%" stopColor="#E5C158" />
             <stop offset="70%" stopColor="#C29323" />
             <stop offset="100%" stopColor="#8A5A00" />
           </linearGradient>
 
-          <linearGradient id="phoenixTailGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <linearGradient
+            id="phoenixTailGradient"
+            x1="0%"
+            y1="0%"
+            x2="0%"
+            y2="100%"
+          >
             <stop offset="0%" stopColor="#EAD075" />
             <stop offset="50%" stopColor="#B3861B" />
             <stop offset="100%" stopColor="#7E5406" stopOpacity="0" />
           </linearGradient>
 
-          <filter id="phoenixFireGlow" x="-50%" y="-50%" width="200%" height="200%">
+          <filter
+            id="phoenixFireGlow"
+            x="-50%"
+            y="-50%"
+            width="200%"
+            height="200%"
+          >
             <feGaussianBlur stdDeviation="1" result="blur" />
             <feMerge>
               <feMergeNode in="blur" />
@@ -90,7 +117,13 @@ export function PhoenixLogo({
             </feMerge>
           </filter>
 
-          <filter id="phoenixSoftGlow" x="-30%" y="-30%" width="160%" height="160%">
+          <filter
+            id="phoenixSoftGlow"
+            x="-30%"
+            y="-30%"
+            width="160%"
+            height="160%"
+          >
             <feGaussianBlur stdDeviation="1.5" result="blur" />
             <feMerge>
               <feMergeNode in="blur" />
@@ -250,7 +283,11 @@ export function PhoenixLogo({
             animate={{
               opacity: [0, 1, 0.6, 0],
               cy: [ember.y, ember.y - 18, ember.y - 28],
-              cx: [ember.x, ember.x + (i % 2 === 0 ? 3 : -3), ember.x + (i % 2 === 0 ? 5 : -5)],
+              cx: [
+                ember.x,
+                ember.x + (i % 2 === 0 ? 3 : -3),
+                ember.x + (i % 2 === 0 ? 5 : -5),
+              ],
             }}
             transition={{
               duration: 2.5,

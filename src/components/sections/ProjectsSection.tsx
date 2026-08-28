@@ -6,7 +6,10 @@ import { ExternalLink, ArrowUpRight } from "lucide-react";
 import { GitHubIcon } from "@/components/ui/SocialIcons";
 import { PROJECTS, FEATURED_PROJECT_SLUGS } from "@/data/projects";
 import type { Project } from "@/types";
-import { StaggerChildren, StaggerItem } from "@/components/animations/StaggerChildren";
+import {
+  StaggerChildren,
+  StaggerItem,
+} from "@/components/animations/StaggerChildren";
 import { Badge } from "@/components/ui/Badge";
 import { Modal } from "@/components/ui/Modal";
 import { Button } from "@/components/ui/Button";
@@ -55,11 +58,13 @@ function ProjectCard({
       <div className="relative overflow-hidden rounded-2xl border border-white/5 bg-white/[0.02] backdrop-blur-xl transition-colors group-hover:border-gold/20">
         <ProjectCoverImage
           src={project.image}
+          images={project.images}
           alt={`${project.title} preview`}
           title={project.title}
           category={project.category}
           fit={project.imageFit ?? "cover"}
           className="aspect-[16/10]"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 420px"
         />
         <Badge variant="gold" className="absolute top-4 left-4 z-10">
           {project.category}
@@ -112,17 +117,21 @@ function ProjectModal({
         <div className="group overflow-hidden rounded-xl border border-white/[0.06]">
           <ProjectCoverImage
             src={project.image}
+            images={project.images}
             alt={`${project.title} preview`}
             title={project.title}
             category={project.category}
             fit={project.imageFit ?? "cover"}
             className="aspect-[16/9]"
+            sizes="(max-width: 768px) 100vw, 768px"
           />
         </div>
 
         <div>
           <Badge variant="gold">{project.category}</Badge>
-          <h2 className="mt-3 text-2xl font-bold text-white">{project.title}</h2>
+          <h2 className="mt-3 text-2xl font-bold text-white">
+            {project.title}
+          </h2>
           <p className="mt-2 text-white/60">{project.longDescription}</p>
         </div>
 
@@ -183,7 +192,11 @@ function ProjectModal({
             </a>
           )}
           {project.githubUrl && (
-            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Button variant="secondary">
                 <GitHubIcon className="h-4 w-4" />
                 View Code
@@ -199,10 +212,18 @@ function ProjectModal({
   );
 }
 
-export function ProjectsSection({ featuredOnly = false }: { featuredOnly?: boolean }) {
+export function ProjectsSection({
+  featuredOnly = false,
+}: {
+  featuredOnly?: boolean;
+}) {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const projects = featuredOnly
-    ? PROJECTS.filter((p) => FEATURED_PROJECT_SLUGS.includes(p.slug as (typeof FEATURED_PROJECT_SLUGS)[number]))
+    ? PROJECTS.filter((p) =>
+        FEATURED_PROJECT_SLUGS.includes(
+          p.slug as (typeof FEATURED_PROJECT_SLUGS)[number],
+        ),
+      )
     : PROJECTS;
 
   return (
@@ -212,10 +233,7 @@ export function ProjectsSection({ featuredOnly = false }: { featuredOnly?: boole
         <StaggerChildren className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
             <StaggerItem key={project.id}>
-              <ProjectCard
-                project={project}
-                onSelect={setSelectedProject}
-              />
+              <ProjectCard project={project} onSelect={setSelectedProject} />
             </StaggerItem>
           ))}
         </StaggerChildren>

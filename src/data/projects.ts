@@ -10,6 +10,11 @@ export const PROJECTS: Project[] = [
     longDescription:
       "Tripare AI is a travel booking platform featuring high-performance flight and hotel search optimized with Redis indexing. The platform includes payment, refund, and billing systems with Zoho Invoice integration, role-based multi-tenant dashboards, and a smart fare comparison module for improved booking efficiency and cost savings.",
     image: "/projects/tripare-ai.png",
+    images: [
+      "/projects/tripare-ai-images/tripare-ai-1.png",
+      "/projects/tripare-ai-images/tripare-ai-2.png",
+      "/projects/tripare-ai-images/tripare-ai-3.png",
+    ],
     imageFit: "cover",
     technologies: [
       "React.js",
@@ -37,18 +42,27 @@ export const PROJECTS: Project[] = [
   {
     id: "2",
     slug: "airport-services-platform",
-    title: "Airport Services Platform (Adani Group)",
+    title: "EATS Assist",
     description:
       "Enterprise booking platform for airport services including Lounge Access, Meet & Greet, Porter, and Wheelchair.",
     longDescription:
       "Built for Adani Group, this enterprise-scale platform handles booking and fulfillment workflows for airport services. It includes responsive customer and operational dashboards with real-time updates via Socket.IO, integrated payment systems, entitlement validation, and booking orchestration.",
-    technologies: [
-      "React.js",
-      "Next.js",
-      "TypeScript",
-      "Node.js",
-      "Socket.IO",
+    images: [
+      "/projects/airport-services-platform-images/airport-services-platform-1.png",
+      "/projects/airport-services-platform-images/airport-services-platform-2.png",
+      "/projects/airport-services-platform-images/airport-services-platform-3.png",
+      "/projects/airport-services-platform-images/airport-services-platform-4.png",
+      "/projects/airport-services-platform-images/airport-services-platform-5.png",
+      "/projects/airport-services-platform-images/airport-services-platform-6.png",
+      "/projects/airport-services-platform-images/airport-services-platform-7.png",
+      "/projects/airport-services-platform-images/airport-services-platform-8.png",
+      "/projects/airport-services-platform-images/airport-services-platform-9.png",
+      "/projects/airport-services-platform-images/airport-services-platform-10.png",
+      "/projects/airport-services-platform-images/airport-services-platform-11.png",
+      "/projects/airport-services-platform-images/airport-services-platform-12.png",
+      "/projects/airport-services-platform-images/airport-services-platform-13.png",
     ],
+    technologies: ["React.js", "Next.js", "TypeScript", "Node.js", "Socket.IO"],
     features: [
       "Lounge Access, Meet & Greet, Porter, and Wheelchair service booking",
       "Customer and operational dashboards with real-time Socket.IO updates",
@@ -85,6 +99,7 @@ export const PROJECTS: Project[] = [
       "Reusable component system with advanced form workflows",
       "Centralized customer data management",
     ],
+    images: [],
     impactMetrics: [
       { label: "Data Efficiency", value: "+30%" },
       { label: "Pipeline", value: "Automated" },
@@ -116,6 +131,7 @@ export const PROJECTS: Project[] = [
       "Dynamic pricing engine with rule-based logic",
       "Kafka-based event-driven microservices architecture",
     ],
+    images: [],
     impactMetrics: [
       { label: "Bookings / Month", value: "100K+" },
       { label: "Response Time", value: "-30-40%" },
@@ -145,6 +161,7 @@ export const PROJECTS: Project[] = [
       "Search, reading history, sharing, and comments",
       "Scalable responsive mobile interfaces with reusable UI components",
     ],
+    images: [],
     liveUrl: "https://www.dailyshepherd.me/",
     impactMetrics: [
       { label: "Content", value: "Bible + Podcast" },
@@ -176,6 +193,7 @@ export const PROJECTS: Project[] = [
       "Lifestyle assessment across Movement, Nutrition, Sleep, and Wellbeing",
       "Scalable React Native architecture with high-performance health analytics UI",
     ],
+    images: [],
     liveUrl: "https://betterminthealth.com/",
     impactMetrics: [
       { label: "Wellness Pillars", value: "4" },

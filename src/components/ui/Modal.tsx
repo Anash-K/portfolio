@@ -59,6 +59,7 @@ export function Modal({ isOpen, onClose, children, className, title }: ModalProp
                 "relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-2xl border border-white/10 bg-surface p-6 shadow-2xl md:p-8",
                 className
               )}
+              data-lenis-prevent="true"
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
@@ -67,7 +68,7 @@ export function Modal({ isOpen, onClose, children, className, title }: ModalProp
             >
               <button
                 onClick={onClose}
-                className="absolute right-4 top-4 rounded-full p-2 text-white/50 transition-colors hover:bg-white/5 hover:text-white"
+                className="absolute right-4 top-4 z-50 rounded-full bg-black/50 p-2 text-white/70 backdrop-blur-md transition-colors hover:bg-black/80 hover:text-white md:right-6 md:top-6"
                 aria-label="Close modal"
               >
                 <X size={20} />

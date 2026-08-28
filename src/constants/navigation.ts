@@ -15,7 +15,7 @@ export const ROUTE_ORDER = NAV_LINKS.map((link) => link.href);
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/anash-khan",
+    href: "https://www.linkedin.com/in/anash-khan-dev/",
     icon: "linkedin",
   },
   {
