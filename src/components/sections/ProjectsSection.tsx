@@ -15,6 +15,7 @@ import { Modal } from "@/components/ui/Modal";
 import { Button } from "@/components/ui/Button";
 import { ProjectCoverImage } from "@/components/ui/ProjectCoverImage";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 function ProjectCard({
   project,
@@ -26,6 +27,7 @@ function ProjectCard({
   const ref = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
+  const router = useRouter();
 
   const mouseXSpring = useSpring(x, { stiffness: 300, damping: 30 });
   const mouseYSpring = useSpring(y, { stiffness: 300, damping: 30 });
@@ -51,7 +53,7 @@ function ProjectCard({
       style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      onClick={() => onSelect(project)}
+      onClick={() => router.push(`/projects/${project.slug}`)}
       whileHover={{ scale: 1.02 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
     >
@@ -75,10 +77,6 @@ function ProjectCard({
             <h3 className="text-xl font-semibold text-white group-hover:text-gold transition-colors">
               {project.title}
             </h3>
-            <ArrowUpRight
-              size={20}
-              className="text-white/30 transition-all group-hover:text-gold group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-            />
           </div>
           <p className="mb-4 text-sm text-white/50 line-clamp-2">
             {project.description}
@@ -187,7 +185,7 @@ function ProjectModal({
             <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="primary">
                 <ExternalLink size={16} />
-                Live Demo
+                Live Link
               </Button>
             </a>
           )}

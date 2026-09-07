@@ -104,7 +104,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="primary">
                 <ExternalLink size={16} />
-                Live Demo
+                Live Link
               </Button>
             </a>
           )}

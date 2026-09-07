@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { FEATURED_PRODUCTS } from "@/data/home";
@@ -10,6 +11,7 @@ import { ProjectCoverImage } from "@/components/ui/ProjectCoverImage";
 import { StaggerChildren, StaggerItem } from "@/components/animations/StaggerChildren";
 
 export function FeaturedProductsSection() {
+  const router = useRouter();
   return (
     <section className="relative py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -26,7 +28,8 @@ export function FeaturedProductsSection() {
             return (
               <StaggerItem key={product.slug}>
                 <motion.article
-                  className="group relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl transition-all duration-500 hover:border-gold/25 hover:bg-white/[0.04]"
+                  onClick={() => router.push(`/projects/${product.slug}`)}
+                  className="group relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl transition-all duration-500 hover:border-gold/25 hover:bg-white/[0.04] cursor-pointer"
                   whileHover={{ y: -4 }}
                 >
                   <ProjectCoverImage
@@ -45,13 +48,9 @@ export function FeaturedProductsSection() {
 
                   <div className="p-6">
                   <div className="mb-2 flex items-start justify-between">
-                    <h3 className="text-xl font-semibold text-white transition-colors group-hover:text-gold">
+                    <h3 className="text-xl font-semibold text-white group-hover:text-gold transition-colors">
                       {product.title}
                     </h3>
-                    <ArrowUpRight
-                      size={18}
-                      className="text-white/30 transition-all group-hover:text-gold group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                    />
                   </div>
                   <p className="mb-4 text-sm leading-relaxed text-white/50">
                     {product.summary}
@@ -66,13 +65,28 @@ export function FeaturedProductsSection() {
                       </span>
                     ))}
                   </div>
-                  <Link
-                    href={`/projects/${product.slug}`}
-                    className="inline-flex items-center gap-1 text-sm font-medium text-gold transition-colors hover:text-gold-light"
-                  >
-                    View Project
-                    <ArrowUpRight size={14} />
-                  </Link>
+                  <div className="flex items-center gap-6">
+                    <Link
+                      href={`/projects/${product.slug}`}
+                      onClick={(e) => e.stopPropagation()}
+                      className="inline-flex items-center gap-1 text-sm font-medium text-gold transition-colors hover:text-gold-light"
+                    >
+                      View Project
+                      <ArrowUpRight size={14} />
+                    </Link>
+                    {project?.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="inline-flex items-center gap-1 text-sm font-medium text-gold transition-colors hover:text-gold-light"
+                      >
+                        Live Link
+                        <ArrowUpRight size={14} />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </motion.article>
             </StaggerItem>

@@ -32,6 +32,7 @@ export const PROJECTS: Project[] = [
       "Role-based and multi-tenant user management with invite flow",
       "Idempotent and fault-tolerant payment processing",
     ],
+    liveUrl: "https://www.tripare.ai/",
     impactMetrics: [
       { label: "Query Latency", value: "-35%" },
       { label: "Booking Efficiency", value: "+30%" },
@@ -46,7 +47,7 @@ export const PROJECTS: Project[] = [
     description:
       "Enterprise booking platform for airport services including Lounge Access, Meet & Greet, Porter, and Wheelchair.",
     longDescription:
-      "Built for Adani Group, this enterprise-scale platform handles booking and fulfillment workflows for airport services. It includes responsive customer and operational dashboards with real-time updates via Socket.IO, integrated payment systems, entitlement validation, and booking orchestration.",
+      "Built for Travel Food and Services, this enterprise-scale platform handles booking and fulfillment workflows for airport services. It includes responsive customer and operational dashboards with real-time updates via Socket.IO, integrated payment systems, entitlement validation, and booking orchestration.",
     images: [
       "/projects/airport-services-platform-images/airport-services-platform-1.png",
       "/projects/airport-services-platform-images/airport-services-platform-2.png",
@@ -69,6 +70,7 @@ export const PROJECTS: Project[] = [
       "Payment and entitlement validation integration",
       "Booking orchestration for streamlined airport service operations",
     ],
+    liveUrl: "https://customer-app-fpcsdcdnd5dsgdd0.a02.azurefd.net/home",
     impactMetrics: [
       { label: "Service Types", value: "4" },
       { label: "Real-time Updates", value: "Socket.IO" },
@@ -161,7 +163,10 @@ export const PROJECTS: Project[] = [
       "Search, reading history, sharing, and comments",
       "Scalable responsive mobile interfaces with reusable UI components",
     ],
-    images: [],
+    images: [
+      "/projects/daily-shepherd-images/daily-shepherd-1.png",
+      "/projects/daily-shepherd-images/daily-shepherd-2.png",
+    ],
     liveUrl: "https://www.dailyshepherd.me/",
     impactMetrics: [
       { label: "Content", value: "Bible + Podcast" },
@@ -193,7 +198,11 @@ export const PROJECTS: Project[] = [
       "Lifestyle assessment across Movement, Nutrition, Sleep, and Wellbeing",
       "Scalable React Native architecture with high-performance health analytics UI",
     ],
-    images: [],
+    images: [
+      "/projects/bettermint-health-images/bettermint-1.png",
+      "/projects/bettermint-health-images/bettermint-2.png",
+      "/projects/bettermint-health-images/bettermint-3.png",
+    ],
     liveUrl: "https://betterminthealth.com/",
     impactMetrics: [
       { label: "Wellness Pillars", value: "4" },
