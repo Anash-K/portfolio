@@ -1,8 +1,7 @@
 export const SITE_CONFIG = {
   name: "Anash Khan",
   title: "Full Stack Developer",
-  tagline:
-    "Building scalable products and exceptional digital experiences.",
+  tagline: "Building scalable products and exceptional digital experiences.",
   description:
     "Full Stack Developer with 3+ years of experience building scalable SaaS and enterprise applications using React, Next.js, Node.js, Nest.js, and TypeScript.",
   email: "anash.khan.dev@gmail.com",
@@ -10,7 +9,7 @@ export const SITE_CONFIG = {
   location: "Bangalore, India",
   yearsOfExperience: 3,
   resumeUrl: "/Anash_Khan_FullStack.pdf",
-  profileImage: "/images/anash-khan.jpg",
+  profileImage: "/images/anash-khan.png",
   profileImageAlt: "Anash Khan — Full Stack Developer",
   url: "https://anashkhan.dev",
   keywords: [
